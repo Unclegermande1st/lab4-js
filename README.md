@@ -1,39 +1,37 @@
- CSC 4035 Lab 3 CSS3 & Responsive Web Design
+ CSC 4035 Lab 4 
 
  Group Members
 - Mwananyina Bwalya (2021474704)
--
+-Jeff 
 
 Project Overview
-This project consists of a multi-page website that applies modern CSS3 techniques, including Flexbox, Grid, media queries and animations.
+Web Development Lab Project 
 
- Pages & Feature
-1. Home Page (`index.html`)
-- Uses Flexbox to arrange sections.
-- Includes a hero banner with a background image.
-- Shared navigation bar across all pages.
+Project Structure
+- index.html – Homepage with theme toggle and user list (Fetch API)
+- contact.html – Contact form with validation and interactive FAQ section
+- script.js – External JavaScript file with all interactive features
+- style.css – External CSS styling for theme, layout and components
+- images
+- services.html
 
-2. Services Page (`services.html`)
-- Uses CSS Grid to display service cards.
-- Each service has an icon or image.
-- Cards have hover effects.
+Features Implemented
+1 Theme Toggle
+- Switch between light and dark modes using a button on the homepage.
 
-3. Contact Page (`contact.html`)
-- Styled HTML5 form with validation.
-- Form fields have focus animations.
-- Includes subtle button hover transitions.
+2 Form Validation + Enhancement
+- Prevents empty submissions.
+- Displays a greeting with the user's name when form is successfully submitted.
 
- CSS Features Used
- Flexbox for navigation and layout.  
- Grid for services section.  
- Responsive images using `max-width: 100%; height: auto;`.  
- Animations:
-  keyframes fadeIn** for form.
-   Button hover transition.
-   Input focus effects.  
-Media Queries for:
-  - max-width: 1024px
-  - max-width: 768px
-  - max-width: 480px
+Fetch API Integration
+- Loads a list of users from an external API and displays their names.
+
+Interactive FAQ Section
+- Clicking on a question reveals/hides the answer.
+
+ Technologies Used
+- HTML5
+- CSS3
+- JavaScript (DOM manipulation, Fetch API, setTimeout)
 
 

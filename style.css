@@ -3,23 +3,44 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-}
-
-/* Navigation Bar */
-nav ul {
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .dark-theme {
+    background-color: #121212;
+    color: #f0f0f0;
+  }
+  
+  /* Navigation Bar */
+  nav ul {
     display: flex;
     justify-content: space-around;
     list-style: none;
     background: #3498db;
     padding: 10px;
-}
-
-nav a {
+  }
+  
+  nav a {
     color: white;
     text-decoration: none;
-}
-
-.hero {
+  }
+  
+  button#themeToggle {
+    margin: 15px;
+    padding: 10px 20px;
+    background: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  button#themeToggle:hover {
+    background: #2980b9;
+  }
+  
+  /* Hero Section */
+  .hero {
     background-image: url('images/hero.jpg');
     background-size: cover;
     background-position: center;
@@ -28,104 +49,121 @@ nav a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: rgb(12, 12, 12);
+    color: #fff;
     text-align: center;
-    font-size: 34px; /* Adjust as needed */
-}
-
-
-/* Services Grid */
-.service-grid {
-    min-height: 100vh; /* Makes the section very tall */
-    padding-bottom: 500px; /* Adds extra space at the bottom */
-    
+    font-size: 34px;
+  }
+  
+  /* Services Section */
+  .service-grid {
+    min-height: 100vh;
+    padding: 50px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     gap: 20px;
-    padding: 50px; /* Adjust as needed */
-    background-image: url('images/services-bg.jpg'); /* Path to your image */
-    background-size: cover;  
+    background-image: url('images/services-bg.jpg');
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-}
-
-/* Service Card */
-.service-card {
-    height: 200px; /* Fixed height */
-    /* OR */
-    min-height: 100px; /* Ensures a minimum height */
-}
-.service-card {
+  }
+  
+  .service-card {
     text-align: center;
     padding: 20px;
+    height: 100px;
     border: 1px solid #3a7b8f;
+    background: rgba(220, 230, 236, 0.8);
     transition: transform 0.3s ease-in-out;
-    background: rgba(220, 230, 236, 0.8); /* Optional: Adds a semi-transparent background */
-}
-
-.service-card:hover {
+  }
+  
+  .service-card:hover {
     transform: scale(1.05);
-}
-
-/* Icons */
-.service-card i {
+  }
+  
+  .service-card i {
     font-size: 40px;
     color: #3498db;
     margin-bottom: 10px;
-}
-
-/* Contact Form */
-.contact-form {
+  }
+  
+  /* Contact Section */
+  .contact {
+    background-image: url('images/contact.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    color: white;
+    text-align: center;
+  }
+  
+  .contact-form {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 10px;
     width: 80%;
     max-width: 500px;
-    margin: auto;
-    animation: fadeIn 0.8s ease-in-out;
-}
-
-input, textarea {
+  }
+  
+  .contact-form label {
+    text-align: left;
+    width: 100%;
+    display: block;
+    margin-top: 10px;
+  }
+  
+  input, textarea {
     margin: 10px 0;
     padding: 10px;
-    border: 1px solid #ccc;
+    border-radius: 5px;
     width: 100%;
-}
-
-input:focus, textarea:focus {
+    border: none;
+  }
+  
+  input:focus, textarea:focus {
     border: 2px solid #3498db;
     box-shadow: 0 0 8px rgba(52, 152, 219, 0.5);
     transition: all 0.3s ease-in-out;
-}
-
-/* Button */
-button {
+  }
+  
+  button {
     background-color: #3498db;
-    color: rgb(23, 185, 131);
-    padding: 10px;
+    color: white;
+    padding: 12px;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-}
-
-button:hover {
+    margin-top: 15px;
+    font-weight: bold;
+  }
+  
+  button:hover {
     background-color: #2980b9;
-}
-
-/* Fade-in Animation */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
+  }
+  
+  /* FAQ Styling */
+  .faq-item {
+    margin-top: 20px;
+  }
+  .question {
+    cursor: pointer;
+    color: #0a0909;
+  }
+  .answer {
+    display: none;
+  }
+  .answer.visible {
+    display: block;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
     .service-grid {
-        grid-template-columns: 1fr;
+      grid-template-columns: 1fr;
     }
-}
+  }
+  
